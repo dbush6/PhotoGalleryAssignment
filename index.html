@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Photo Gallery Assignment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+            html {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+            img {
+                width: 100%;
+            }
+            
+            p {
+                font-size: 1.25em;
+                color: #fff;
+            }
+            .item {
+                margin: 0 auto;
+            }
+
+            figcaption, label, input, small {
+                font-size: 1em;
+            }
+            figcaption {
+                text-align: center;
+            }
+            figcaption.chile, figcaption.hawaii, figcaption.moab-desert {
+                position: relative;
+                bottom: 30px;
+                color: #fff;
+            }
+            figcaption.italy {
+                position: relative;
+                bottom: 30px;
+                color: #000;
+            }
+            figcaption.rocky-mountains, figcaption.switzerland, figcaption.uk, figcaption.usa {
+                position: relative;
+                bottom: 210px;
+                color: #000;
+            }
+            figcaption.guatemala, figcaption.wyoming {
+                position: relative;
+                bottom: 210px;
+                color: #fff;
+            }
+            figcaption.iran, figcaption.ireland {
+                position: relative;
+                bottom: 480px;
+                color: #000;
+            }
+            small {
+                text-align: center;
+            }
+            
+            nav {
+                display: flex;
+            }
+            nav a {
+                font-size: 1.5em;
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+            }    
+            nav li {
+                display: inline-block;  
+                padding: 10px;
+                align-items: center;
+            } 
+            
+            body {
+                background-color: #000;
+                margin: 0 10% 0 10%;
+            }
+            h1 {
+                font-size: 3em;
+                background-color: #fff;
+                color: #007d7b;
+                padding: 5px;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 2em; 
+                text-align: center;  
+            }
+            
+            .btn {
+                background-color: #000;
+                color: #fff;
+                border: 2px solid #fff;
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                padding: 10px 10px;
+                text-decoration: none;
+            }
+            section {
+                background-color: #fff;
+                padding: 10px;
+            }
+            section p {
+                color: #000;
+            }
+            footer p {
+                font-size: small;
+                text-align: center;
+            }
+            section#contact {
+                justify-content: center;
+                background-color: #000;
+                color: white;
+                max-width: 100%;
+            }
+            section#contact p {
+                color: #fff;
+                text-align: center;
+            }
+            section#contact form {
+                display: grid;
+                gap: 10px;
+                justify-content: center;
+            }
+            
+            label {
+                padding: 10px;
+                font-size: small;
+            }
+            ::placeholder {
+                color: #007d7b;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: small;
+                font-weight: bold;
+                padding: 10px;
+            }
+            input {
+                font-size: small;
+                padding: 5px;
+
+            }
+            #my-submit {
+                padding: 5px 50px;
+                background-color: #007d7b;
+                color: #fff;
+                font-size: 1em;
+                justify-self: center;
+                border-radius: 50px;
+                margin: 20px;
+            }
+            .container {
+                display: grid;
+                grid-gap: 10px; 
+                grid-template-columns: 1fr;                                                                      
+                padding: 10px;
+                justify-content: space-between;
+            
+            }
+             @media (min-width: 475px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                    flex-direction: column;
+                    flex-wrap: wrap; 
+                }
+                nav {
+                    justify-content: center;   
+                }
+            }   
+             @media (min-width: 880px) {
+                .container {
+                    grid-template-columns: repeat(3, 1fr);
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                nav {
+                    justify-content: flex-end;   
+                }
+            }
+            @media (min-width: 1300px) {
+                .container {
+                    grid-template-columns: repeat(4, 1fr);
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                }
+
+            }
+           
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>TK Photography</h1>
+        </header> 
+        <nav>
+            <ul>
+                <li><a href="#" title="About">ABOUT</a></li>
+                <li><a href="#" title="Gallery">GALLERY</a></li>
+                <li><a href="#" title="Contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+            <h2>ABOUT</h2>
+                <p>Hello!</p> 
+                <p>I'm TK and I'm a photographer. I love looking at life through the lens of my camera. Landscape photography is my specialty and it's taken me all over the world.</p> 
+            <h2>GALLERY</h2>
+                <p>Here are some highlights of my work. The locations and year are in the caption.</p> 
+            
+            <div class="container">
+                <figure class="item">
+                    <img src="images/Chile.png" alt="Chile.png">
+                    <figcaption class="chile">Chile, 2001</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Guatemala.png" alt="Guatemala.png">
+                    <figcaption class="guatemala">Guatemala, 1997</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Hawaii.png" alt="Hawaii.png">
+                    <figcaption class="hawaii">Hawaii, 2010</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Iran.png" alt="Iran.png">
+                    <figcaption class="iran">Iran, 1999</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Ireland.png" alt="Ireland.png">
+                    <figcaption class="ireland">Ireland, 2012</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Italy.png" alt="Italy.png">
+                    <figcaption class="italy">Italy, 2015</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Moab-Desert.png" alt="Moab-Desert.png">
+                    <figcaption class="moab-desert">Moab Desert, 2020</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Rocky-Mountains.png" alt="Rocky-Mountains.png">
+                    <figcaption class="rocky-mountains">Rocky Mountains, 2009</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Switzerland.png" alt="Switzerland.png">
+                    <figcaption class="switzerland">Switzerland, 2014</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/UK.png" alt="UK.png">
+                    <figcaption class="uk">UK, 2005</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/USA.png" alt="USA.png">
+                    <figcaption class="usa">USA, 2021</figcaption>
+                </figure>
+                <figure class="item">
+                    <img src="images/Wyoming.png" alt="Wyoming.png">
+                    <figcaption class="wyoming">Wyoming, 2021</figcaption>
+                </figure>
+            </div>
+            </section>
+
+            <section id="contact">
+            <h2>CONTACT</h2>
+                <p>Please fill out this form and I'll connect with you soon.</p>
+                <form action="submit_form" method="POST">
+                    <label for="my-name">NAME</label>
+                    <input type="text" name="my-name" id="my-name" style="width: 100vh;" placeholder="YOUR FULL NAME">
+
+                    <label for="my-email">EMAIL</label>
+                    <input type="email" name="my-email" id="my-email" style="width: 100vh;" placeholder="ENTER YOUR EMAIL ADDRESS">
+
+                    <label for="my-message">MESSAGE</label>
+                    <input name="my-message" id="my-message" style="width: 100vh;" placeholder="WHAT CAN I HELP YOU WITH?">
+
+                    <input type="submit" name="my-submit" id="my-submit" style="width: 75vh" value="SUBMIT">
+                </form>
+            </section> 
+        </main>
+        <footer>
+            <p><small>COPYRIGHT 2021 TK PHOTOGRAPHY</small></p>
+            <a href="#" class="btn">Top</a>
+        </footer>
+    </body>
+</html>
